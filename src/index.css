@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@import url("./App.css");
+@import url("./pages/core/Layout.css");
+@import url("./pages/core/Sidebar.css");
+@import url("./pages/Pages.css");
+@import url("./components/Components.css");
+
+@font-face {
+	font-family: Raleway;
+	src: url("./assets/fonts/Raleway-VariableFont_wght.ttf");
+}
+
+:root {
+	--primary-black: #000;
+	--theme-black: #212121;
+	--theme-red: #dc3545;
+	--theme-yellow: #ff7004;
+	--text-black: #474747;
+	--text-disebled: #999999;
+}
+
+.Raleway-light {
+	font-family: Raleway;
+	font-weight: 300;
+}
+
+.Raleway-regular {
+	font-family: Raleway;
+	font-weight: 500;
+}
+
+.Raleway-bold {
+	font-family: Raleway;
+	font-weight: 800;
+}
+
+.Raleway {
+	font-family: Raleway;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.theme-btn {
+	font-size: 13px;
+	font-weight: 600;
+	border: 0px;
+	transition: all 0.3 ease-in-out;
+}
+.theme-btn:hover {
+	background-color: var(--theme-yellow);
+	color: white;
+}
+
+/* Common Button Styles */
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: var(--theme-yellow);
+	color: white;
+}
+
+/* Header and Footer Styles */
+.header-container,
+.footer-container {
+	color: white;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-container .logo-desktop,
+.footer-container .logo-desktop {
+	display: none;
+}
+
+.header-container .logo-mobile,
+.footer-container .logo-mobile {
+	display: block;
+}
+
+.header-container .nav-actions,
+.footer-container .footer-links {
+	display: flex;
+	gap: 15px;
+}
+
+.header-container .nav-actions button,
+.footer-container .footer-links a {
+	color: white;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.header-container .nav-actions .cart-count {
+	background: red;
+	border-radius: 50%;
+	padding: 2px 6px;
+	font-size: 0.8em;
+	position: relative;
+	top: -10px;
+	right: 10px;
+}
+
+.header--button {
+	height: 24px;
+	width: 24px;
+}

@@ -1,0 +1,40 @@
+@media screen and (min-width: 768px) {
+	.footer-container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
+@media (min-width: 992px) {
+	.header-container .logo-desktop,
+	.footer-container .logo-desktop {
+		display: block;
+	}
+
+	.header-container .logo-mobile,
+	.footer-container .logo-mobile {
+		display: none;
+	}
+
+	.header-container .nav-actions,
+	.footer-container .footer-links {
+		display: flex;
+	}
+
+	.footer-container .footer-links {
+		flex-direction: column;
+	}
+
+	.header-container .menu-button,
+	.header-container .search-button {
+		display: none;
+	}
+}
+
+@media (max-width: 991px) {
+	.header-container .mobile-menu,
+	.header-container .mobile-search,
+	.footer-container .mobile-menu,
+	.footer-container .mobile-search {
+		display: block;
+	}
+}

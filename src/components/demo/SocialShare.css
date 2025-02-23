@@ -1,0 +1,21 @@
+.social-share {
+	margin-top: 20px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.social-icons {
+	display: flex;
+	gap: 10px;
+}
+
+.social-icons a {
+	text-decoration: none;
+	color: var(--theme-black);
+	font-size: 22px;
+}
+
+.social-icons a:hover {
+	text-decoration: underline;
+}
