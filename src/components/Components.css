@@ -311,14 +311,17 @@
 	font-weight: bold;
 }
 
-/*  */
-
+/* End CollectionSlidebar.css */
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
-	height: var(--swiper-scrollbar-size, 0px);
+	position: unset !important;
+	left: var(--swiper-scrollbar-sides-offset, 0%) !important;
+	bottom: var(--swiper-scrollbar-bottom, 0px) !important;
+	top: var(--swiper-scrollbar-top, auto) !important;
+	z-index: -1 !important;
+	height: var(--swiper-scrollbar-size, 0px) !important;
+	width: calc(0% - 0 * var(--swiper-scrollbar-sides-offset, 0%)) !important;
 }
-
-/* End CollectionSlidebar.css */
 
 /* ======================================================================================= */
 
@@ -480,16 +483,23 @@
 
 .product-details {
 	padding: 16px;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: centers;
+	gap: 7px;
 }
 
 .product-title {
 	font-size: 18px;
 	margin: 0 0 8px;
-	color: #333;
 	transition: color 0.3s ease;
 }
 
+.product-title > a {
+	text-decoration: none;
+	color: #333;
+}
 .product-card.hovered .product-title {
 	color: var(--theme-yellow);
 }
@@ -501,10 +511,11 @@
 }
 
 .product-price {
+	font-size: 16px;
 	display: flex;
-	justify-content: space-evenly;
+	align-items: center;
+	gap: 10px;
 }
-
 .MRP_PRICE {
 	color: #666;
 	text-decoration: line-through;
@@ -523,6 +534,10 @@
 
 .add-to-cart:hover {
 	background-color: #0056b3;
+}
+
+.active-filter {
+	color: var(--theme-yellow);
 }
 
 /* End ProductList.css */
@@ -553,14 +568,21 @@
 	position: relative;
 }
 
-.btn-close {
+.modal-btn-close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	background: none;
+	top: -10px;
+	right: -10px;
 	border: none;
 	font-size: 20px;
 	cursor: pointer;
+
+	.modal-btn-close-icon {
+		border-radius: 100%;
+		padding: 3px;
+		font-size: 25px;
+		background: var(--theme-yellow);
+		color: #fff;
+	}
 }
 
 .modal-body {
@@ -660,7 +682,7 @@
 
 /* ======================================================================================= */
 
-/* Start Slider.css */
+/* Start HeroSlider.css */
 
 .slider-container {
 	width: 100%;
@@ -730,6 +752,4 @@
 	background: #ff5733 !important;
 }
 
-/* End Slider.css */
-
-/* ======================================================================================= */
+/* End HeroSlider.css */

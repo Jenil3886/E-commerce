@@ -3,28 +3,12 @@ import "../Pages.css";
 import CollectionSlider from "../../components/CollectionSlider";
 import Slider from "../../components/HeroSlider";
 import ProductList from "../../components/ProductList";
-import banner1 from "../../assets/images/pages/image.jpeg";
-import banner2 from "../../assets/images/pages/image (1).jpeg";
 
-const banners = [
-	{
-		id: 1,
-		title: "Sale Furniture For Summer",
-		description: "Great Discounts Here",
-		imageUrl: banner1,
-		link: "/shop",
-	},
-	{
-		id: 2,
-		title: "Office Chair For Best Offer",
-		description: "Great Discounts Here",
-		imageUrl: banner2,
-		link: "/shop",
-	},
-];
+import { FILTER_PRODUCT_NAME, SECTION_NAME } from "../../helper/constant";
+import { banners } from "../../helper/data";
 
 const HomePage = ({ wishlist, setWishlist }) => {
-	const [filter, setFilter] = useState("New Arrival");
+	const [filter, setFilter] = useState(FILTER_PRODUCT_NAME.NEW_ARRIVAL);
 
 	const handleFilterChange = (newFilter) => {
 		setFilter(newFilter);
@@ -34,25 +18,41 @@ const HomePage = ({ wishlist, setWishlist }) => {
 		<div className="home-container">
 			<Slider />
 			<CollectionSlider />
-
-			{/* Featured Products */}
 			<div className="container">
 				<div className="banner">
-					<h2 className="Raleway">Our Products</h2>
+					<h2 className="Raleway">{SECTION_NAME.OUR_PRODUCT}</h2>
 					<p className="Raleway">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore</p>
 				</div>
 
 				<div className="filter-product Raleway-regular">
-					<div onClick={() => handleFilterChange("New Arrival")}>New Arrival</div>
-					<div onClick={() => handleFilterChange("Featured")}>Featured</div>
-					<div onClick={() => handleFilterChange("On Sale")}>On Sale</div>
-					<div onClick={() => handleFilterChange("Trending")}>Trending</div>
+					<div
+						className={filter === FILTER_PRODUCT_NAME.NEW_ARRIVAL ? "active-filter" : ""}
+						onClick={() => handleFilterChange(FILTER_PRODUCT_NAME.NEW_ARRIVAL)}
+					>
+						{FILTER_PRODUCT_NAME.NEW_ARRIVAL}
+					</div>
+					<div
+						className={filter === FILTER_PRODUCT_NAME.FEATURED ? "active-filter" : ""}
+						onClick={() => handleFilterChange(FILTER_PRODUCT_NAME.FEATURED)}
+					>
+						{FILTER_PRODUCT_NAME.FEATURED}
+					</div>
+					<div
+						className={filter === FILTER_PRODUCT_NAME.ON_SALE ? "active-filter" : ""}
+						onClick={() => handleFilterChange(FILTER_PRODUCT_NAME.ON_SALE)}
+					>
+						{FILTER_PRODUCT_NAME.ON_SALE}
+					</div>
+					<div
+						className={filter === FILTER_PRODUCT_NAME.TRANDING ? "active-filter" : ""}
+						onClick={() => handleFilterChange(FILTER_PRODUCT_NAME.TRANDING)}
+					>
+						{FILTER_PRODUCT_NAME.TRANDING}
+					</div>
 				</div>
 				<ProductList filter={filter} wishlist={wishlist} setWishlist={setWishlist} />
 			</div>
-
-			{/*  banner-section*/}
-
+			{/*  banner-section */}
 			<section className="banner-section">
 				<div className="row">
 					{banners.map((banner) => (
@@ -70,12 +70,11 @@ const HomePage = ({ wishlist, setWishlist }) => {
 					))}
 				</div>
 			</section>
-
 			{/* latest news */}
 			<section>
 				<div className="container">
 					<div className="banner">
-						<h2 className="Raleway">Latest News</h2>
+						<h2 className="Raleway">{SECTION_NAME.LATEST_NEWS}</h2>
 						<p className="Raleway">Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore</p>
 					</div>
 				</div>

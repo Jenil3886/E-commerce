@@ -2,9 +2,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, incrementQuantity, decrementQuantity, setCart, clearCart } from "../../features/cartSlice";
 import "../Pages.css";
+import ReactButton from "../../components/Buttons/button";
+import { BUTTONS_NAME } from "../../helper/constant";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 	const dispatch = useDispatch();
+
 	const cart = useSelector((state) => state.cart);
 
 	useEffect(() => {
@@ -70,9 +74,9 @@ const Cart = () => {
 									<td>${product.SALE_PRICE.toFixed(2)}</td>
 									<td>
 										<div className="quantity-controls">
-											<button onClick={() => handleDecrement(product.id)}>-</button>
+											<ReactButton type="button" onClick={() => handleDecrement(product.id)} btnText="-" />
 											<input type="text" readOnly value={product.quantity} />
-											<button onClick={() => handleIncrement(product.id)}>+</button>
+											<ReactButton type="button" onClick={() => handleIncrement(product.id)} btnText="+" />
 										</div>
 									</td>
 									<td>${(product.SALE_PRICE * product.quantity).toFixed(2)}</td>
@@ -101,10 +105,12 @@ const Cart = () => {
 						</form>
 					</div>
 					<div className="checkout-container">
-						<button className="clear-cart-button" onClick={handleClearCart}>
-							CLEAR CART
-						</button>
-						<button className="checkout-button">PROCEED TO CHECKOUT</button>
+						<Link className="clear-cart-button" onClick={handleClearCart}>
+							{BUTTONS_NAME.CLEAR_CART}
+						</Link>
+						<Link className="checkout-button" to="/signin">
+							{BUTTONS_NAME.PROCEED_TO_CHECKOUT}
+						</Link>
 					</div>
 				</div>
 			</div>

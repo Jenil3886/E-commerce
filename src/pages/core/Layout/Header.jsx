@@ -105,10 +105,6 @@ const Header = () => {
 								</div>
 								{/* Cart Button */}
 								<div className="header-section">
-									{/* <button className="header-btn cart-btn" onClick={toggleCartSidebar}>
-										<PiHandbag />
-										<span className="cart-count">{cartItems.length}</span>
-									</button> */}
 									<ReactButton
 										type="button"
 										className="header-btn cart-btn"

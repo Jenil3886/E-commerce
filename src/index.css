@@ -24,6 +24,8 @@
 	--theme-yellow: #ff7004;
 	--text-black: #474747;
 	--text-disebled: #999999;
+	--theme-gray: #ebebeb;
+	--theme-d-gray: #2f333a;
 }
 
 .Raleway-light {
@@ -123,4 +125,7 @@ button:hover {
 .header--button {
 	height: 24px;
 	width: 24px;
+}
+a {
+	text-decoration: none;
 }

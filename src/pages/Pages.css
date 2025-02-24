@@ -1,16 +1,5 @@
 /* Start Home.css */
 
-/* Hero Section */
-/* .hero { */
-/* background: url("../../assets/images/pages/slider-2-1.jpg") no-repeat center center/cover; Ensure this file exists in the assets/images/pages directory */
-/* height: 400px; */
-/* display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	color: white;
-} */
-
 .hero-content h1 {
 	font-size: 36px;
 }
@@ -37,26 +26,6 @@
 	width: 100%;
 }
 
-.product {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border: 1px solid black;
-	padding: 10px;
-}
-
-.product-img img {
-	width: 100%;
-	max-width: 65px;
-	max-height: 65px;
-}
-
-.product-name {
-	font-size: 15px;
-}
-
-/*  */
-
 .filter-product {
 	display: flex;
 	justify-content: center;
@@ -80,13 +49,13 @@
 	margin: 0 0 42px;
 }
 
-.banner h2 {
+.banner > h2 {
 	font-size: 36px;
 	margin-bottom: 15px;
 	font-weight: 700;
 	color: rgb(33, 33, 33);
 }
-.banner p {
+.banner > p {
 	color: rgb(71, 71, 71);
 	margin: auto;
 	max-width: 500px;
@@ -162,18 +131,6 @@
 	font-size: 1rem;
 	color: gray;
 }
-
-/* .slider {
-	background-image: url("../../assets/images/pages/slider-2-1.jpg"); 
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	text-align: center;
-} */
 
 /* End Home.css */
 
@@ -582,7 +539,6 @@ quantity-controls button:hover {
 	color: #333;
 }
 
-
 .add-to-cart-button:disabled {
 	background-color: #ccc;
 	color: #666;
@@ -781,7 +737,6 @@ quantity-controls button:hover {
 	color: #333;
 }
 
-
 .remove-button {
 	font-size: 22px;
 	color: var(--text-disebled);
@@ -794,3 +749,34 @@ quantity-controls button:hover {
 /* End Wishlist.css */
 
 /* ====================================================================================================================== */
+
+.cart-mini-box {
+	right: 0px;
+	margin: 0px;
+	padding: 15px;
+	display: flex;
+	z-index: 999;
+	position: fixed;
+	-webkit-box-align: center;
+	align-items: center;
+	top: calc(30% + 110px);
+	flex-direction: column;
+	border-radius: 3px 0px 0px 3px;
+	color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 16px -1px;
+	font-family: "Open Sans";
+	background-color: var(--theme-d-gray);
+	font-weight: 600;
+}
+.mini-box-pirce {
+	width: 65px;
+	height: 25px;
+	padding: 0px 5px;
+	margin-top: 5px;
+	line-height: 25px;
+	color: var(--theme-yellow);
+	border-radius: 3px;
+	font-size: 14px;
+	background-color: #fff;
+	font-weight: 700;
+}

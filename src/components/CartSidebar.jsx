@@ -23,7 +23,7 @@ const CartSidebar = ({ isOpen, toggleSidebar }) => {
 		dispatch(decrementQuantity(id));
 	};
 
-	const totalPrice = cart.reduce((total, product) => total + product.SALE_PRICE * product.quantity, 0);
+	const grandTotal = cart.reduce((total, product) => total + product.SALE_PRICE * product.quantity, 0);
 
 	if (!isOpen) return null;
 
@@ -33,9 +33,6 @@ const CartSidebar = ({ isOpen, toggleSidebar }) => {
 			<div className={`cart-sidebar ${isOpen ? "open" : ""}`}>
 				<div className="cart-sidebar-header">
 					<h2>Cart</h2>
-					{/* <button className="close-button" onClick={toggleSidebar}>
-						&times;
-					</button> */}
 					<ReactButton type="button" className="close-button" btnText="&times;" onClick={toggleSidebar} />
 				</div>
 				<div className="cart-sidebar-content">
@@ -69,7 +66,7 @@ const CartSidebar = ({ isOpen, toggleSidebar }) => {
 				</div>
 				<div className="cart-sidebar-footer">
 					<Link className="view-cart-button" to="/cart">
-						View Cart<span className="total-price">${totalPrice.toFixed(2)}</span>
+						View Cart<span className="total-price">${grandTotal.toFixed(2)}</span>
 					</Link>
 				</div>
 			</div>

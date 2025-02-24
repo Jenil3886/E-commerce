@@ -2,11 +2,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-import "./ProductSlider.css";
+import "../Modals/Modal.css";
 
-const ProductSlider = ({ images }) => {
+const ProductSlider = ({ images = [] }) => {
 	const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
-
+	// muje ProductSlider.jsx me aesa kuch bana ke do
 	return (
 		<div className="product-slider">
 			{/* Main Image Slider */}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./SocialShare.css";
+import "../Modals/Modal.css";
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 

@@ -1,3 +1,6 @@
+import banner1 from "../assets/images/pages/image.jpeg";
+import banner2 from "../assets/images/pages/image (1).jpeg";
+
 // MenuItems
 export const menuItems = [
 	{
@@ -159,6 +162,40 @@ export const collections = [
 // 	// Add more products as needed
 // ];
 
+// =========================================================== this is a different data =================================================//
+// export const products = [
+// 	{
+// 		id: "1",
+// 		name: "Living Room Sets",
+// 		description: "This is a sample product description.",
+// 		MRP_PRICE: 1520.0,
+// 		SALE_PRICE: 1540.0,
+// 		images: [
+// 			"https://cdn.shopify.com/s/files/1/0864/0607/0562/files/Nav1_LivingRoomFurniture.jpg?v=1709032906",
+// 			"https://cdn.shopify.com/s/files/1/0864/0607/0562/files/Nav1_LivingRoomFurniture.jpg?v=1709032906",
+// 			"https://cdn.shopify.com/s/files/1/0864/0607/0562/files/Nav1_LivingRoomFurniture.jpg?v=1709032906",
+// 		],
+// 		sizes: ["S", "M", "L"],
+// 		colors: ["Red", "Blue", "Green"],
+// 		availability: "10 in Stock",
+// 	},
+// 	{
+// 		id: "2",
+// 		name: "Flexible Chair",
+// 		description: "This is another sample product description.",
+// 		MRP_PRICE: 1200.0,
+// 		SALE_PRICE: 1100.0,
+// 		images: [
+// 			"https://cdn.shopify.com/s/files/1/0864/0607/0562/files/Nav1_LivingRoomFurniture.jpg?v=1709032906",
+// 			"https://cdn.shopify.com/s/files/1/0864/0607/0562/files/Nav1_LivingRoomFurniture.jpg?v=1709032906",
+// 		],
+// 		sizes: ["S", "M"],
+// 		colors: ["Black", "White"],
+// 		availability: "5 in Stock",
+// 	},
+// 	// Add more products as needed
+// ];
+
 export const products = [
 	{
 		id: 1,
@@ -175,6 +212,19 @@ export const products = [
 		isFeatured: false,
 		isOnSale: true,
 		isTrending: false,
+		images: [
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F1.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F1.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F2_40d9c634-67d1-4623-a7d5-c2ef2b24db83.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F2_40d9c634-67d1-4623-a7d5-c2ef2b24db83.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F3_00f4381c-69ee-413c-bdaf-d635a392bd1d.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F3_00f4381c-69ee-413c-bdaf-d635a392bd1d.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F4_b0f3af65-1151-442e-9ade-09deb3213eac.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F4_b0f3af65-1151-442e-9ade-09deb3213eac.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F1.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F1.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F2_40d9c634-67d1-4623-a7d5-c2ef2b24db83.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F2_40d9c634-67d1-4623-a7d5-c2ef2b24db83.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F3_00f4381c-69ee-413c-bdaf-d635a392bd1d.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F3_00f4381c-69ee-413c-bdaf-d635a392bd1d.jpg%3Fv%3D1709108882&w=1920&q=75",
+			"https://furns-react.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F4_b0f3af65-1151-442e-9ade-09deb3213eac.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F4_b0f3af65-1151-442e-9ade-09deb3213eac.jpg%3Fv%3D1709108882&w=1920&q=75",
+		],
+		sizes: ["S", "M", "L"],
+		colors: ["Red", "Blue", "Green"],
+		availability: "10 in Stock",
 	},
 	{
 		id: 2,
@@ -291,5 +341,24 @@ export const products = [
 		isFeatured: false,
 		isOnSale: true,
 		isTrending: true,
+	},
+];
+
+// banner
+
+export const banners = [
+	{
+		id: 1,
+		title: "Sale Furniture For Summer",
+		description: "Great Discounts Here",
+		imageUrl: banner1,
+		link: "/shop",
+	},
+	{
+		id: 2,
+		title: "Office Chair For Best Offer",
+		description: "Great Discounts Here",
+		imageUrl: banner2,
+		link: "/shop",
 	},
 ];

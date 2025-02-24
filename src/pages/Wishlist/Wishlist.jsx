@@ -6,6 +6,8 @@ import { MdOutlineCancel } from "react-icons/md";
 import { useCartSidebar } from "../../context/CartSidebarContext";
 import { CartContext } from "../../context/CartContext";
 import { addToCart } from "../../features/cartSlice";
+import { BUTTONS_NAME } from "../../helper/constant";
+import ReactButton from "../../components/Buttons/button";
 
 const Wishlist = () => {
 	const dispatch = useDispatch();
@@ -59,15 +61,17 @@ const Wishlist = () => {
 							<td>${product.SALE_PRICE}</td>
 
 							<td>
-								<button className="add-to-cart-button" disabled={product.stokout} onClick={() => handleAddToCart(product)}>
-									{product.stokout ? "Out of Stock" : "Add to Cart"}
-								</button>
+								<ReactButton
+									type="button"
+									className="add-to-cart-button"
+									disabled={product.stokout}
+									onClick={() => handleAddToCart(product)}
+									btnText={product.stokout ? BUTTONS_NAME.OUT_OF_STOCK : BUTTONS_NAME.ADD_TO_CART}
+								/>
 							</td>
 
 							<td>
-								<button className="remove-button" onClick={() => handleRemove(product.id)}>
-									<MdOutlineCancel />
-								</button>
+								<ReactButton type="button" className="remove-button" onClick={() => handleRemove(product.id)} iconImg={<MdOutlineCancel />} />
 							</td>
 						</tr>
 					))}
